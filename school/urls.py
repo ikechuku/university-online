@@ -25,6 +25,10 @@ urlpatterns = [
     # departments
     url(r'^departments/', include('departments.urls')),
 
+    
+    # accounts
+    url(r'^accounts/', include('accounts.urls')),
+
     # courses
     url(r'^courses/', include('courses.urls')),
 
@@ -45,5 +49,5 @@ urlpatterns += staticfiles_urlpatterns()
 
 
 if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_URL)
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_URL)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

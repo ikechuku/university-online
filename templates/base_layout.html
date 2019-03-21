@@ -227,7 +227,7 @@
 									</li>
 									<li class="divider"> </li>
 									<li>
-										<a href="{% url 'sign_in' %}">
+										<a href="{% url 'accounts:logout' %}">
 											<i class="icon-logout"></i> Log Out </a>
 									</li>
 								</ul>
@@ -341,17 +341,17 @@
 									</a>
 									<ul class="sub-menu">
 										<li class="nav-item">
-											<a href="all_professors.html" class="nav-link "> <span class="title">All Professors</span>
+											<a href="{% url 'accounts:prof_list' %}" class="nav-link "> <span class="title">All Professors</span>
 											</a>
 										</li>
 										<li class="nav-item">
-											<a href="add_professor_bootstrap.html" class="nav-link "> <span class="title">Add Professor</span>
+											<a href="{% url 'accounts:add-prof' %}" class="nav-link "> <span class="title">Add Professor</span>
 											</a>
 										</li>
-										<li class="nav-item">
-											<a href="edit_professor.html" class="nav-link "> <span class="title">Edit Professor</span>
+										{% comment %} <li class="nav-item">
+											<a href="{% url 'accounts:update-prof' %}" class="nav-link "> <span class="title">Edit Professor</span>
 											</a>
-										</li>
+										</li> {% endcomment %}
 									</ul>
 								</li>
 								<li class="nav-item">

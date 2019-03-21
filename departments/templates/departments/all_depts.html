@@ -83,7 +83,7 @@
                 <tbody>
                     {% for dept in depts  %}
                   <tr class="odd">
-                    <td>{{ dept.pk }}</td>
+                    <td>{{ dept.ID }}</td>
                     <td> {{ dept.dept_name }}</td>
                     <td>{{ dept.dept_head }}</td>
                     <td>{{ dept.phone }}</td>
@@ -92,7 +92,7 @@
                     <td>{{ dept.dept_capacity }}</td>
                     <td>
                       <a
-                        href="javascript:void(0)"
+                        href="{% url 'departments:update-course' dept.id %}"
                         class=""
                         data-toggle="tooltip"
                         title="Edit"
@@ -100,7 +100,7 @@
                         <i class="fa fa-check"></i
                       ></a>
                       <a
-                        href="javascript:void(0)"
+                        href="{% url 'departments:delete-course' dept.id %}"
                         class="text-inverse"
                         title="Delete"
                         data-toggle="tooltip"

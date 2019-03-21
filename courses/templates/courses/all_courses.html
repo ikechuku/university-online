@@ -1,6 +1,4 @@
-{% extends 'base_layout.html' %}
-{% block content %}
-
+{% extends 'base_layout.html' %} {% block content %} {% load static %}
 <!-- start page content -->
 <div class="page-content-wrapper">
   <div class="page-content">
@@ -30,20 +28,19 @@
       <div class="card-box">
         <div class="card-head">
           <header>All Courses</header>
-		</div>
+        </div>
         <div class="card-body ">
-		  <!-- start course list -->
-		  
+          <!-- start course list -->
+
           <div class="row">
-			{% for course in courses %}
-            
+            {% for course in courses %}
             <div class="col-lg-3 col-md-6 col-12 col-sm-6">
               <div class="blogThumb">
                 <div class="thumb-center">
                   <img
                     class="img-responsive"
                     alt="user"
-                    src="assets/img/course/course1.jpg"
+                    src="{{ course.profile_pic.url }}"
                   />
                 </div>
                 <div class="course-box">
@@ -61,26 +58,26 @@
                     >
                   </p>
                   <p>
-                    <span><i class="ti-user"></i> Professor: Jane Doe</span>
+                    <span
+                      ><i class="ti-user"></i> Professor: {{ course.professor }} </span
+                    >
                   </p>
                   <p>
                     <span
-                      ><i class="fa fa-graduation-cap"></i> Students: 200+</span
+                      ><i class="fa fa-graduation-cap"></i> Students:
+                      {{ course.course_max_students }}+</span
                     >
                   </p>
-                  <button
-                    type="button"
-                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-info"
-                  >
-                    Read More
-                  </button>
+                  <a href="{% url 'courses:update-course' course.id %}">
+                    <button type="button" class=" btn-block mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-info">
+                      Edit
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
-			{% endfor %}
-		  
-		</div>
-
+            {% endfor %}
+          </div>
 
           <!-- End course list -->
         </div>

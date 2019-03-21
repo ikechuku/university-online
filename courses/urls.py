@@ -10,9 +10,9 @@ urlpatterns = [
     url(r'add/', views.CourseCreate.as_view(), name='add-course'),
 
     # courses/course/2
-     url(r'course/(?P<pk>[0-9]+)/$', views.CourseUpdate.as_view(), name='update-course'),
+     url(r'update-course/(?P<pk>[0-9]+)/$', views.CourseUpdate.as_view(), name='update-course'),
 
     # courses/course/2/delete
-     url(r'course/(?P<pk>[0-9]+)/delete', views.CourseDelete.as_view(), name='delete-course'),
+     url(r'delete-course/(?P<pk>[0-9]+)/delete', views.CourseDelete.as_view(), name='delete-course'),
 
 ]

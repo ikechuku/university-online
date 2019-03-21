@@ -14,9 +14,9 @@
 	<!-- google font -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
 	<!-- icons -->
-	<link href="fonts/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
-	<link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-	<link href="fonts/material-design-icons/material-icon.css" rel="stylesheet" type="text/css" />
+	<link href="{% static 'fonts/simple-line-icons/simple-line-icons.min.css' %}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'fonts/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'fonts/material-design-icons/material-icon.css' %}" rel="stylesheet" type="text/css" />
 	<!--bootstrap -->
 	<link href="{% static '/plugins/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
 	<!-- full calendar -->
@@ -257,7 +257,7 @@
 			
 			<!-- start page container -->
 			<div class="page-container">
-				<!-- start sidebar menu -->
+							<!-- start sidebar menu -->
 				<div class="sidebar-container">
 					<div class="sidemenu-container navbar-collapse collapse fixed-menu">
 						<div id="remove-scroll" class="left-sidemenu">
@@ -280,7 +280,7 @@
 									</div>
 								</li>
 								<li class="nav-item">
-									<a href="index.html" class="nav-link nav-toggle">
+									<a href="{% url 'home' %}" class="nav-link nav-toggle">
 										<i class="material-icons">dashboard</i>
 										<span class="title">Home</span>
 										<span class="selected"></span>
@@ -288,24 +288,24 @@
 									</a>
 								</li>
 								
-								<li class="nav-item">
+								<li class="nav-item start active">
 									<a href="#" class="nav-link nav-toggle"> <i class="material-icons">school</i>
 										<span class="title">Courses</span> <span class="arrow"></span>
 									</a>
 									<ul class="sub-menu">
 										<li class="nav-item">
-											<a href="all_courses.html" class="nav-link "> <span class="title">All Courses</span>
+											<a href="{% url 'courses:courses_list' %}" class="nav-link "> <span class="title">All Courses</span>
 											</a>
 										</li>
 									
 										<li class="nav-item">
-											<a href="add_course_bootstrap.html" class="nav-link "> <span class="title">Add Course</span>
+											<a href=" {% url 'courses:add-course' %} " class="nav-link "> <span class="title">Add new Course</span>
 											</a>
 										</li>
-										<li class="nav-item">
-											<a href="edit_course.html" class="nav-link "> <span class="title">Edit Course</span>
+										<!-- <li class="nav-item">
+											<a href="#" class="nav-link "> <span class="title">Edit Course</span>
 											</a>
-										</li>
+										</li> -->
 									</ul>
 								</li>
 								<li class="nav-item">
@@ -314,17 +314,17 @@
 									</a>
 									<ul class="sub-menu">
 										<li class="nav-item">
-											<a href="all_department.html" class="nav-link "> <span class="title">All Departments</span>
+											<a href="{% url 'departments:dept_list' %}" class="nav-link "> <span class="title">All Departments</span>
 											</a>
 										</li>
 										<li class="nav-item">
-											<a href="add_department_bootstrap.html" class="nav-link "> <span class="title">Add Department</span>
+											<a href="{% url 'departments:add-dept' %}" class="nav-link "> <span class="title">Add new Department</span>
 											</a>
 										</li>
-										<li class="nav-item">
+										<!-- <li class="nav-item">
 											<a href="edit_department.html" class="nav-link "> <span class="title">Edit Department</span>
 											</a>
-										</li>
+										</li> -->
 									</ul>
 								</li>
 								<li class="nav-item">
@@ -336,17 +336,17 @@
 											</a>
 										</li>
 										<li class="nav-item">
-											<a href="add_student_bootstrap.html" class="nav-link "> <span class="title">Add Student</span>
+											<a href="add_student_bootstrap.html" class="nav-link "> <span class="title">Add new Student</span>
 											</a>
 										</li>
-										<li class="nav-item">
+										<!-- <li class="nav-item">
 											<a href="edit_student.html" class="nav-link "> <span class="title">Edit Student</span>
 											</a>
-										</li>
+										</li> -->
 									</ul>
 								</li>
-								<li class="nav-item start active">
-									<a href="event.html" class="nav-link nav-toggle"> <i class="material-icons">event</i>
+								<li class="nav-item">
+									<a href="{% url 'events' %}" class="nav-link nav-toggle"> <i class="material-icons">event</i>
 										<span class="title">Event Management</span>
 									</a>
 								</li>

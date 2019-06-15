@@ -1,0 +1,42 @@
+{% for field in form %}
+	<div class="col-lg-6 p-t-20">
+		<div class="wrap-input100 validate-input" data-validate="Enter {{ field.field_label }}">
+			{{ field }}
+			<span class="focus-input100" data-placeholder=""></span>
+		</div>
+	</div>
+
+{% endfor %} 
+
+
+{% comment %} 
+<div class="col-lg-6 p-t-20">
+							<div class="wrap-input100 validate-input" data-validate="Enter name">
+								<input class="input100" type="text" name="Name" placeholder="Name">
+								<span class="focus-input100" data-placeholder="&#xf207;"></span>
+							</div>
+						</div>
+						<div class="col-lg-6 p-t-20">
+							<div class="wrap-input100 validate-input" data-validate="Enter Email">
+								<input class="input100" type="email" name="email" placeholder="Email">
+								<span class="focus-input100" data-placeholder="&#xf207;"></span>
+							</div>
+						</div>
+						<div class="col-lg-6 p-t-20">
+							<div class="wrap-input100 validate-input" data-validate="Enter Department">
+								<input class="input100" type="text" name="Department" placeholder="Department">
+								<span class="focus-input100" data-placeholder="&#xf207;"></span>
+							</div>
+						</div>
+						<div class="col-lg-6 p-t-20">
+							<div class="wrap-input100 validate-input" data-validate="Enter password">
+								<input class="input100" type="password" name="pass" placeholder="Password">
+								<span class="focus-input100" data-placeholder="&#xf191;"></span>
+							</div>
+						</div>
+						<div class="col-lg-6 p-t-20">
+							<div class="wrap-input100 validate-input" data-validate="Enter password again">
+								<input class="input100" type="password" name="pass2" placeholder="Confirm password">
+								<span class="focus-input100" data-placeholder="&#xf191;"></span>
+							</div>
+						</div> {% endcomment %}

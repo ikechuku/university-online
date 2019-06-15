@@ -1,0 +1,19 @@
+{% for field in form %}
+	<div class="col-lg-6 p-t-20">
+		<div class="wrap-input100 validate-input text-center" data-validate="Enter {{ field.field_label }}">
+			{{ field }}
+			<span class="focus-input100" data-placeholder=""></span>
+		</div>
+	</div>
+
+{% endfor %} 
+{% comment %} 
+
+<div class="wrap-input100 validate-input" data-validate="Enter Name">
+	<input class="input100" type="text" name="Name" placeholder="Name">
+	<span class="focus-input100" data-placeholder="&#xf207;"></span>
+</div>
+<div class="wrap-input100 validate-input" data-validate="Enter password">
+	<input class="input100" type="password" name="pass" placeholder="Password">
+	<span class="focus-input100" data-placeholder="&#xf191;"></span>
+</div> {% endcomment %}

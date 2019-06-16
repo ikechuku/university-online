@@ -8,6 +8,7 @@
 - Django==1.11
 - Pillow==5.4.1
 - pytz==2018.9
+- djangorestframework
 - virtualenv==16.4.3 (optional)
 - virtualenvwrapper-win==1.2.5 (optional)
 
@@ -58,7 +59,17 @@
  
  ## User Interface
 
-The User Interface for this project was built with **HTML5, CSS3 and JavaScript.** [Google Fonts](https://fonts.google.com/) provided the clean and amazing fonts.
+The User Interface was built with **Bootstrap4** 
+
+### API
+
+The API consumption was built with **django rest framework**
+
 
 ### Author
 Ikechuku Ukpa
+
+## License
+
+MIT License
+
